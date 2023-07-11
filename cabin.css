@@ -116,9 +116,6 @@ section .buttons {
     }
 }
 
-/* --------- add about & contact here ------  */
-
-
 
 /* ------- aside --------  */
 
@@ -164,10 +161,56 @@ aside .close__btn {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(218, 218, 218,.35);
+    background-color: rgba(218, 218, 218, 0.35);
     backdrop-filter: blur(5px);
 }
 
 .backdrop.active {
     display: block;
+}
+
+/* ---------------- custom -------------  */
+
+#custom {
+    padding: 50px;
+}
+
+.custom-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.custom {
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(218, 218, 218,0.6)rgb(218, 218, 218));
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
 }
