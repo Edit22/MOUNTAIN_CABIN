@@ -25,7 +25,7 @@
         <nav class="navigation__right">
             <a href="" class="desktop">Shop</a>
             <a href="" class="desktop">Account</a>
-            <a href="" id="menu__btn">Menu</a>
+            <a href="" id="menuBtn">Menu</a>
         </nav>
     </header>
 
@@ -103,6 +103,26 @@
 </section>
 </div>
 
+<script>
+
+
+
+const btnOpen = document.getElementById('.menuBtn');
+const btnClose = document.querySelector('.close__btn');
+const menu = document.querySelector('.backdrop');
+const blur = document.querySelector('.backdrop.active');
+
+
+btnOpen.addEventListener('click', function() {
+    menu.style.display = 'block';
+    blur.style.display = 'block';
+
+})
+
+
+
+
+</script>
 
 </body>
 </html>
