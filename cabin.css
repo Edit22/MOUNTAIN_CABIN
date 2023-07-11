@@ -198,7 +198,7 @@ aside .close__btn {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(218, 218, 218,0.6)rgb(218, 218, 218));
+    background: linear-gradient(rgb(255, 255, 255, 0.5),rgb(218, 218, 218));
     border-radius: 5px;
     position: absolute;
     left: 0;
@@ -214,3 +214,48 @@ aside .close__btn {
     transition: height 0.5s;
 
 }
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.custom:hover img {
+    transform: scale(1.1);
+}
+
+.custom:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #6B7F8D;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.8s; 
+    
+}
+
+.btn:hover {
+    background:#DADADA;
+}
+
+
