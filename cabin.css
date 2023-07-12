@@ -10,7 +10,7 @@ html {
 
 body {
     color:#333333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Figtree', Helvetica, sans-serif;
 }
 
 .desktop {
@@ -73,7 +73,8 @@ section .content {
 }
 
 section h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    
 }
 
 section a {
@@ -131,9 +132,9 @@ aside {
     height: 100vh;
 }
 
-aside.active {
+/* aside.active {
     right: 0;
-}
+} */
 
 aside a {
     display: block;
