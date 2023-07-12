@@ -10,6 +10,7 @@ html {
 
 body {
     color:#333333;
+    letter-spacing: 0.3px;
     font-family: 'Figtree', Helvetica, sans-serif;
 }
 
@@ -259,4 +260,39 @@ aside .close__btn {
     background:#DADADA;
 }
 
+/* ------------- contact ------------ */
 
+#contact {
+    padding: 50px;
+}
+
+
+.forms__container {
+    margin-top: 40px;
+}
+
+.forms__input-container {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.form-input-text {
+    display: block;
+    padding: 10px 80px;
+    background-color: #DADADA;
+    border: 1px solid #6B7F8D;
+}
+
+.form-input-message {
+    display: block;
+    padding: 70px 80px;
+    background-color: #DADADA;
+    border: 1px solid #6B7F8D;
+}
