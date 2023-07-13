@@ -263,16 +263,26 @@ aside .close__btn {
 /* ------------- contact ------------ */
 
 #contact {
-    padding: 50px;
+    padding: 40px;
     /* display: grid; */
 }
 
-.about__contact {
+
+.containers {
+    display: grid;
+    grid-template-columns: 500px 400px;
+}
+
+/* .about__contact {
   display: grid;
+} */
+
+.contact-container h1 {
+   margin-bottom: 40px
 }
 
 .forms__container {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .forms__input-container {
