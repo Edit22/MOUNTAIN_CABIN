@@ -264,8 +264,12 @@ aside .close__btn {
 
 #contact {
     padding: 50px;
+    /* display: grid; */
 }
 
+.about__contact {
+  display: grid;
+}
 
 .forms__container {
     margin-top: 40px;
@@ -295,4 +299,75 @@ aside .close__btn {
     padding: 70px 80px;
     background-color: #DADADA;
     border: 1px solid #6B7F8D;
+}
+
+
+
+
+
+
+/* ---------------- checkbox ------------  */
+
+.checkbox__group {
+    margin-top: 80px;
+}
+
+.checkbox__group-input {
+    list-style: none;
+}
+
+.checkbox__group-item {
+    margin-top: 15px;
+}
+
+.checkbox-input {
+    width: 25px;
+    height: 25px;;
+}
+
+.checkbox-label {
+    position: absolute;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+/* ---------- disclaimer ---------  */
+
+.disclaimer {
+    margin-top: 40px;
+}
+
+.disclaimer p {
+    font-size: 14px;
+}
+
+.form-button {
+    margin-top: 40px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    border: 1px solid #6B7F8D;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #3368ff;
+    color: white;
+}
+
+
+/* --------------- footer ------------  */
+
+.drive__footer-nav {
+    text-align: center;
+
+}
+
+.footer-item {
+    display: inline-block;
+}
+
+.footer-item a {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: inherit;
+    margin: 5px;
 }
