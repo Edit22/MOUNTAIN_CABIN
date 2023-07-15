@@ -140,80 +140,93 @@
     <div class="containers">
         <div class="about-container">
           <h1>Contact Information</h1>
-        </div>
-    
+        
+           <section class="forms__container">
+            <div class="forms__inner-container">
+               <div class="forms__input-group">
+                  <div class="forms__input-container">
+                      <label class="form-label"for="edit-name">Your Name</label>
+                      <div class="form-input">
+                          <input class="form-input-text">
+                      </div>
+                  </div>
+               </div>
+      
+               <div class="forms__input-group">
+                  <div class="forms__input-container">
+                      <label class="form-label"for="edit-email">Your Email</label>
+                      <div class="form-input">
+                          <input class="form-input-text">
+                      </div>
+                  </div>
+               </div>
+      
+               <div class="forms__input-group">
+                  <div class="forms__input-container">
+                      <label class="form-label"for="edit-message">Your Message</label>
+                      <div class="form-input">
+                          <input class="form-input-message">
+                      </div>
+                  </div>
+               </div>
+      
+            </div>
 
-        <div class="contact-container">
+         
+        <!-- ------------ checkbox ----------  -->
+
+        <div class="checkbox__group">
+            <div class="chekbox__group-item">
+              <li class="checkbox__group-input">
+                  <input class="checkbox-input" type="checkbox">
+                  <label class="checkbox-label">I'm interested in receiving Mountain Cabin price guide </label>
+              </li>
+            </div>
+      
+            <div class="checkbox__group-item">
+              <li class="checkbox__group-input">
+                  <input class="checkbox-input" type="checkbox">
+                  <label class="checkbox-label">
+                      <span><a class="get-updates-link" href="">Get Mountain Cabin Updates</a></span>
+                  </label>
+              </li>
+            </div>
+          </div>   
+      
+          <div class="disclaimer">
+              <p>By clicking "Submit & Continue" I agree to share the provided information with Mountain Cabin to be contacted with more details or offers about Tesla products. I understand these calls or texts may use computer-assisted dialing or pre-recorded messages. This consent is not a condition of the demo drive.</p>
+          </div>
+      
+          <div class="forms__container-button">
+              <button class="form-button"><a>Submit and Continue</a></button>
+          </div>
+      </div>
+
+    <!-- ------------ about us ----------  -->
+
+
+    <div class="contact-container">
+        <h1>About Us</h1>
+        <img src="images/about__us2.png">
+        <div class="layer">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor ewofej wefjisf fij sfefefa-flip-horizontal</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+    </div>
+    <!-- <div class="contact-container">
+        <div class="contact-container-aboutUs">
           <h1>About Us</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora perspiciatis, eaque placeat harum nobis reiciendis ipsa sequi eum voluptatibus id quia ullam reprehenderit voluptate suscipit mollitia quaerat rerum obcaecati? Temporibus?</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora perspiciatis, eaque placeat harum nobis reiciendis ipsa sequi eum voluptatibus id quia ullam reprehenderit.</p>
         </div>
+        <div class="contact-container-img">
+        <img src="images/about__us2.png">
+        </div>
+    </div> -->
+        
+        
     </div>
    
-
-
-
-   <section class="forms__container">
-      <div class="forms__inner-container">
-         <div class="forms__input-group">
-            <div class="forms__input-container">
-                <label class="form-label"for="edit-name">Your Name</label>
-                <div class="form-input">
-                    <input class="form-input-text">
-                </div>
-            </div>
-         </div>
-
-         <div class="forms__input-group">
-            <div class="forms__input-container">
-                <label class="form-label"for="edit-email">Your Email</label>
-                <div class="form-input">
-                    <input class="form-input-text">
-                </div>
-            </div>
-         </div>
-
-         <div class="forms__input-group">
-            <div class="forms__input-container">
-                <label class="form-label"for="edit-message">Your Message</label>
-                <div class="form-input">
-                    <input class="form-input-message">
-                </div>
-            </div>
-         </div>
-
-      </div>
-   
-
-   <!-- -------------- checkbox --------------  -->
-
-   <div class="checkbox__group">
-      <div class="chekbox__group-item">
-        <li class="checkbox__group-input">
-            <input class="checkbox-input" type="checkbox">
-            <label class="checkbox-label">I’m interested in receiving Mountain Cabin price guide </label>
-        </li>
-      </div>
-
-      <div class="checkbox__group-item">
-        <li class="checkbox__group-input">
-            <input class="checkbox-input" type="checkbox">
-            <label class="checkbox-label">
-                <span><a class="get-updates-link" href="">Get Mountain Cabin Updates</a></span>
-            </label>
-        </li>
-      </div>
-    </div>   
-
-    <div class="disclaimer">
-        <p>By clicking "Submit & Continue" I agree to share the provided information with Mountain Cabin to be contacted with more details or offers about Tesla products. I understand these calls or texts may use computer-assisted dialing or pre-recorded messages. This consent is not a condition of the demo drive.</p>
-    </div>
-
-    <div class="forms__container-button">
-        <button class="form-button"><a>Submit and Continue</a></button>
-    </div>
-</div>
-
-
 
 <!-- --------------- footer ---------------  -->
 
@@ -235,8 +248,8 @@
 <script>
 
 
-const locationSlideImg = document.querySelector('.location__slideImg');
-const locationNextBtn = document.querySelector('.location__nextBtn');
+const locationSlideImg = document.querySelector('location__slideImg');
+const locationNextBtn = document.querySelector('location__nextBtn');
 
 const locationSlides = ["location__images/location_mountain_cabin-1.png", "location__images/location_mountain_cabin-2.png", "location__images/location_mountain_cabin-3.png", "location__images/location_mountain_cabin-4.png", "location__images/location_mountain_cabin-5.png" ];
 let currentSlideIndex = 0;
@@ -245,13 +258,11 @@ locationNextBtn.addEventListener('click', function() {
     currentSlideIndex++;
     if (currentSlideIndex >= locationSlides.length) {
        currentSlideIndex = 0; 
-    }
+}
 
     locationSlideImg.src = locationSlides[currentSlideIndex];
 
 });
-
-
 
 
 </script>
