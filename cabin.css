@@ -172,33 +172,77 @@ aside .close__btn {
 }
 
 /* ----------- cabin - slideshow ---------  */
-.cabin__slideshow {
-    height: 600px;
+
+
+.cabin__slideshow,
+.location__slideshow {
+    height: 500px;
+
 }
-.cabin__slideshow-container {
+.cabin__slideshow-container,
+.location__slideshow-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
     grid-gap: 150px;
-}
-
-.cabin-img {
-    position: relative;
-    width: 100%;
-    height: 40%;
-    padding-bottom: 100%;
-    overflow: hidden;
-    border-radius: 5px;
-    display: block;
-    margin-top: 60px;
-    margin-left: 50px;
     
+}
+
+.cabin-img,
+.location-img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  display: block;  
 
 }
 
-
-.cabin-button {
-    margin-top: 50px;
+.cabin-img img,
+.location-img img {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    margin-top: 80px;
+    margin-left: 40px;
+    object-fit:contain;
 }
+
+
+.cabin-button,
+.location-button {
+    margin-top: 80px;
+    margin-right: 40px;
+}
+
+.cabin-button p,
+.location-button p {
+    margin-top: 20px;
+}
+
+.cabinNextBtn,
+.locationNextBtn {
+    margin-top: 120px;
+    display: block;
+    background-color:white;
+    color: #6B7F8D;
+    padding: 10px 65px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #6B7F8D;
+    cursor: pointer;
+}
+
+
+/* -------- location-slideshow -----  */
+
+
+
+
+
 /* ---------------- custom -------------  */
 
 #custom {
