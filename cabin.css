@@ -184,7 +184,7 @@ aside .close__btn {
 .cabin-img {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 40%;
     padding-bottom: 100%;
     overflow: hidden;
     border-radius: 5px;
@@ -354,8 +354,9 @@ aside .close__btn {
 .contact-container-img img {
     position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;   
+    height: 40%;
+    margin-top: 40px;
+    /* object-fit: cover;    */
 }
 
 
