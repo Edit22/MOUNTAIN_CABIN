@@ -236,6 +236,45 @@ aside .close__btn {
     cursor: pointer;
 }
 
+@media (max-width: 1500px) {
+    .cabin__slideshow-container {
+        max-width: 1500px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+
+    }
+    .cabinNextBtn {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .cabinNextBtn {
+        margin-top: 60px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .cabin__slideshow,
+    .location__slideshow {
+    height: 450px;
+}
+.cabinNextBtn {
+    margin-top: 30px;
+    padding: 10px 40px;
+} 
+.cabin__slideshow-container {
+    margin-top: 10px;
+}
+
+}
+    
+        
+
+   
+
 
 /* ---------------- custom -------------  */
 
@@ -330,6 +369,7 @@ aside .close__btn {
 
 #contact {
     padding: 40px;
+    margin-top: 40px;
 }
 
 
@@ -339,6 +379,17 @@ aside .close__btn {
     grid-gap: 60px;
 }
 
+@media (max-width: 1024px) {
+    .contact-container {
+        margin-top: 160px;
+    }
+}
+
+@media (max-width: 912px) {
+    .contact-container {
+        margin-top: 10px;
+    }
+}
 
 .contact-container h1 {
    margin-bottom: 40px
@@ -449,6 +500,8 @@ aside .close__btn {
 
 /* --------------- footer ------------  */
 
+
+
 .drive__footer-nav {
     text-align: center;
 
@@ -465,3 +518,4 @@ aside .close__btn {
     color: inherit;
     margin: 5px;
 }
+
