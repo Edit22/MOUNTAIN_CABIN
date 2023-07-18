@@ -58,13 +58,13 @@
         <p>Rates starting at $549/mo</p>
         <div class="buttons">
             <a href="#custom">Custom Orders</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">About Us</a>
         </div>
     </div>
 </section>
 </div>
 
-<!-- ---------- cabin - more photos ----------   -->
+<!-- ---------- cabin - slideshow ----------  -->
 
 <section class="cabin__slideshow">
     <div class="cabin__slideshow-container">
@@ -241,19 +241,13 @@
     <!-- ------------ about us ----------  -->
 
 
-    <!-- <div class="contact-container">
-        <h1>About Us</h1>
-        <img src="images/about__us2.png">
-        <div class="contact-container-layer">
-            <h3>About Us</h3>
-            <p>Lorem ipsum dolor ewofej wefjisf fij sfefefa-flip-horizontal</p>
-            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
-    </div> -->
     <div class="contact-container">
         <div class="contact-container-aboutUs">
           <h1>About Us</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora perspiciatis, eaque placeat harum nobis reiciendis ipsa sequi eum voluptatibus id quia ullam reprehenderit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, dolore.
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora perspiciatis, eaque placeat harum nobis reiciendis ipsa sequi eum voluptatibus id quia ullam reprehenderit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <br>
+            <br>
+         Ea, dolore.
           Laboriosam culpa nulla similique aspernatur, quaerat nobis. Repudiandae suscipit officia labore harum a eligendi inventore possimus? Perspiciatis laudantium nihil. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quas quisquam, quam architecto facilis ullam. </laborum></p>
         </div>
         <div class="contact-container-img">
@@ -285,21 +279,22 @@
 <script>
 
 
-const locationSlideImg = document.querySelector('location__slideImg');
-const locationNextBtn = document.querySelector('location__nextBtn');
+const cabinImg = document.querySelector('cabinSlideImg');
+const cabinBtn = document.querySelector('cabinNextBtn');
 
-const locationSlides = ["location__images/location_mountain_cabin-1.png", "location__images/location_mountain_cabin-2.png", "location__images/location_mountain_cabin-3.png", "location__images/location_mountain_cabin-4.png", "location__images/location_mountain_cabin-5.png" ];
+const cabinSlides =["location_cabin/cabin_4.png", "location_cabin/cabin_6.png", "location_cabin/cabin_3.png", "location_cabin/cabin_2.png", "location_cabin/cabin_1.png"];
 let currentSlideIndex = 0;
 
-locationNextBtn.addEventListener('click', function() {
-    currentSlideIndex++;
-    if (currentSlideIndex >= locationSlides.length) {
-       currentSlideIndex = 0; 
-}
+cabinBtn.addEventListener('click', function() {
+   currentSlideIndex++;
+    if (currentSlideIndex >= cabinSlides.length) {
+        currentSlideIndex = 0;
+    }
 
-    locationSlideImg.src = locationSlides[currentSlideIndex];
+    cabinImg.src = cabinSlides[currentSlideIndex];
 
 });
+
 
 
 </script>

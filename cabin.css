@@ -171,7 +171,7 @@ aside .close__btn {
     display: block;
 }
 
-/* ----------- cabin - slideshow ---------  */
+/* ----------- cabin + location - slideshow ---------  */
 
 
 .cabin__slideshow,
@@ -235,12 +235,6 @@ aside .close__btn {
     border: 1px solid #6B7F8D;
     cursor: pointer;
 }
-
-
-/* -------- location-slideshow -----  */
-
-
-
 
 
 /* ---------------- custom -------------  */
@@ -336,15 +330,13 @@ aside .close__btn {
 
 #contact {
     padding: 40px;
-    /* display: grid; */
 }
 
 
 .containers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-    /* grid-template-columns: 600px 500px; */
-    grid-gap: 50px;
+    grid-gap: 60px;
 }
 
 
@@ -353,7 +345,7 @@ aside .close__btn {
 }
 
 .forms__container {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .forms__input-container {
@@ -368,18 +360,22 @@ aside .close__btn {
     letter-spacing: 0.3px;
 }
 
+
+
 .form-input-text {
     display: block;
-    padding: 10px 100px;
+    padding: 10px 150px;
     background-color: #DADADA;
     border: 1px solid #6B7F8D;
+    text-align: left;
 }
 
 .form-input-message {
     display: block;
-    padding: 80px 100px;
+    padding: 100px 150px;
     background-color: #DADADA;
     border: 1px solid #6B7F8D;
+    text-align: left;
 }
 
 
@@ -399,7 +395,7 @@ aside .close__btn {
     position: absolute;
     width: 100%;
     height: 40%;
-    margin-top: 40px;
+    margin-top: 60px;
     /* object-fit: cover;    */
 }
 
@@ -407,7 +403,7 @@ aside .close__btn {
 /* ---------------- checkbox ------------  */
 
 .checkbox__group {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .checkbox__group-input {
