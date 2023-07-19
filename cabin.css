@@ -63,6 +63,14 @@ section {
     background-position: center center;
 }
 
+@media (max-width: 390px) {
+    section {
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
 section .content {
     width: 100%;
     height: 100vh;
@@ -171,20 +179,18 @@ aside .close__btn {
     display: block;
 }
 
+
 /* ----------- cabin + location - slideshow ---------  */
 
 
-.cabin__slideshow,
-.location__slideshow {
-    height: 500px;
-
-}
 .cabin__slideshow-container,
 .location__slideshow-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
     grid-gap: 150px;
-    
+   place-items: center;
+   height: fit-content;
+ 
 }
 
 .cabin-img,
@@ -195,7 +201,8 @@ aside .close__btn {
   padding-bottom: 100%;
   overflow: hidden;
   border-radius: 5px;
-  display: block;  
+  display: grid;
+  place-items: center;
 
 }
 
@@ -204,15 +211,14 @@ aside .close__btn {
     position: absolute;
     width: 100%;
     height: 50%;
-    margin-top: 80px;
     margin-left: 40px;
-    object-fit:contain;
+    object-fit: contain;
 }
 
 
 .cabin-button,
 .location-button {
-    margin-top: 80px;
+    margin-top: 10px;
     margin-right: 40px;
 }
 
@@ -227,7 +233,7 @@ aside .close__btn {
     display: block;
     background-color:white;
     color: #6B7F8D;
-    padding: 10px 65px;
+    padding: 12px 85px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
@@ -237,20 +243,23 @@ aside .close__btn {
 }
 
 @media (max-width: 1500px) {
-    .cabin__slideshow-container {
+    .cabin__slideshow-container,
+    .location__slideshow-container {
         max-width: 1500px;
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
         column-gap: 40px;
 
     }
-    .cabinNextBtn {
+    .cabinNextBtn,
+    .locationNextBtn {
         margin-top: 60px;
     }
 }
 
 @media (max-width: 1100px) {
-    .cabinNextBtn {
+    .cabinNextBtn
+    .locationNextBtn {
         margin-top: 60px;
     }
 
@@ -261,13 +270,19 @@ aside .close__btn {
     .location__slideshow {
     height: 450px;
 }
-.cabinNextBtn {
+.cabinNextBtn,
+.locationNextBtn {
     margin-top: 30px;
     padding: 10px 40px;
 } 
-.cabin__slideshow-container {
+.cabin__slideshow-container,
+.location__slideshow-container {
     margin-top: 10px;
 }
+
+}
+
+@media (max-width: 912px) {
 
 }
     
@@ -286,7 +301,7 @@ aside .close__btn {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .custom {
@@ -353,7 +368,7 @@ aside .close__btn {
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #6B7F8D;
-    padding: 14px 50px;
+    padding: 12px 85px;
     border-radius: 6px;
     text-decoration: none;
     color: inherit;
@@ -375,12 +390,18 @@ aside .close__btn {
 
 .containers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-    grid-gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 80px;
+}
+
+.contact-container-aboutUs,
+.about-container {
+    margin-top: 60px;
 }
 
 @media (max-width: 1024px) {
-    .contact-container {
+    .contact-container,
+    .about-container {
         margin-top: 160px;
     }
 }
