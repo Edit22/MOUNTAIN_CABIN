@@ -63,6 +63,15 @@ section {
     background-position: center center;
 }
 
+@media (max-width: 912px) {
+    section {
+        height: 100vh;
+        
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
 @media (max-width: 390px) {
     section {
         height: 100vh;
@@ -84,6 +93,13 @@ section .content {
 section h1 {
     font-size: 4rem;
     
+}
+
+@media (max-width: 912px) {
+    section h1 {
+        font-size: 3rem;
+        
+    }
 }
 
 section a {
@@ -283,7 +299,98 @@ aside .close__btn {
 }
 
 @media (max-width: 912px) {
+    .cabin__slideshow-container,
+    .location__slideshow-container {
+    
+        display: grid;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 20px;
+        grid-template-columns: 1fr 500px 1fr;
+        gap: 10px;
 
+    }
+    .cabinSlideImg,
+    .locationSlideImg {
+        display: none;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .cabin__slideshow-container,
+    .location__slideshow-container {
+    
+        display: grid;
+        margin: 0 auto;
+        margin-left: 50px;
+        justify-content: center;
+        padding: 20px;
+        grid-template-columns: 1fr 500px 1fr;
+        gap: 10px;
+
+    }
+    .cabinSlideImg,
+    .locationSlideImg {
+        display: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .cabin__slideshow-container,
+    .location__slideshow-container {
+    
+        display: grid;
+        margin: 0 auto;
+        margin-left: 50px;
+        justify-content: center;
+        padding: 20px;
+        grid-template-columns: 1fr 400px 1fr;
+        gap: 10px;
+
+    }
+    .cabinSlideImg,
+    .locationSlideImg {
+        display: none;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .cabin__slideshow-container,
+    .location__slideshow-container {
+        display: grid;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        grid-template-columns: 1fr 300px 1fr;
+        gap: 10px;
+
+    }
+    .cabinSlideImg,
+    .locationSlideImg {
+        display: none;
+    }
+}
+
+@media (max-width: 280px) {
+    .cabin__slideshow-container,
+    .location__slideshow-container {
+    
+        display: grid;
+        margin: 0 auto;
+        margin-left: 40px;
+        justify-content: center;
+        padding: 20px;
+        grid-template-columns: 1fr 200px 1fr;
+        gap: 10px;
+
+    }
+    .cabinSlideImg,
+    .locationSlideImg {
+        display: none;
+    }
 }
     
         
@@ -488,7 +595,7 @@ aside .close__btn {
 
 .checkbox-input {
     width: 25px;
-    height: 25px;;
+    height: 25px;
 }
 
 .checkbox-label {
