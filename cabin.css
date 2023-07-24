@@ -303,7 +303,7 @@ aside .close__btn {
     .location__slideshow-container {
     
         display: grid;
-        margin: 0 auto;
+        margin: 40px auto;
         justify-content: center;
         padding: 20px;
         grid-template-columns: 1fr 500px 1fr;
@@ -322,7 +322,7 @@ aside .close__btn {
     .location__slideshow-container {
     
         display: grid;
-        margin: 0 auto;
+        margin: 40px auto;
         margin-left: 50px;
         justify-content: center;
         padding: 20px;
@@ -341,7 +341,7 @@ aside .close__btn {
     .location__slideshow-container {
     
         display: grid;
-        margin: 0 auto;
+        margin: 40px auto;
         margin-left: 50px;
         justify-content: center;
         padding: 20px;
@@ -360,7 +360,7 @@ aside .close__btn {
     .cabin__slideshow-container,
     .location__slideshow-container {
         display: grid;
-        margin: 0 auto;
+        margin: 20px auto;
         justify-content: center;
         align-items: center;
         padding: 20px;
@@ -379,7 +379,7 @@ aside .close__btn {
     .location__slideshow-container {
     
         display: grid;
-        margin: 0 auto;
+        margin: 40px auto;
         margin-left: 40px;
         justify-content: center;
         padding: 20px;
