@@ -18,3 +18,11 @@
 // });
 
 
+const menuOpen = document.querySelector('.menuBtn');
+
+const menuClose = document.querySelector('.close__btn');
+const menuAside = document.querySelector('.menu__aside');
+
+menuOpen.addEventListener('click', function() {
+     menuAside.style.right = '310px';
+});

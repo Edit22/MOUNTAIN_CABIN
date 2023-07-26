@@ -292,5 +292,36 @@ cabinImg.src = cabinSlideshow[currentCabinSlideshowIndex];
 });
 
 </script>
+
+<script>
+
+const menuOpen = document.querySelector('.menuBtn');
+
+const menuClose = document.querySelector('.close__btn');
+const menuAside = document.querySelector('.menu__aside');
+const backdrop = document.querySelector('.backdrop');
+
+
+function isMobileScreen() {
+    return window.matchMedia('(max-width: 912px)').matches;
+}
+
+
+menuOpen.addEventListener('click', function() {
+    if (isMobileScreen()) {
+     menuAside.style.left = '310px';
+     backdrop.style.display = 'block';
+    }
+});
+
+menuClose.addEventListener('click', function() {
+  if (isMobileScreen()) {
+    menuAside.style.left = '0';
+    backdrop.style.display = 'none';
+  }
+});
+
+
+</script>
 </body>
 </html>

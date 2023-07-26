@@ -18,9 +18,15 @@ body {
     display: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 912px) {
     .desktop {
         display: initial;
+    }
+}
+
+@media(max-width: 912px) {
+    .center__desktop {
+        display: none;
     }
 }
 
@@ -145,20 +151,21 @@ section .buttons {
 
 /* ------- aside --------  */
 
-aside {
+.menu__aside {
+    /* display: none; */
     position: fixed;
-    right: 0;
-    transition: right .4s ease;
+    /* right: 0; */
+    /* transition: right .4s ease; */
     right: -310px; 
     width: 310px;
     background-color: #DADADA;
     padding: 100px 40px;
-    z-index: 4;
+    /* z-index: 4; */
     height: 100vh;
 }
 
 /* aside.active {
-    right: 0;
+    right: 310px;
 } */
 
 aside a {
@@ -191,9 +198,9 @@ aside .close__btn {
     backdrop-filter: blur(5px);
 }
 
-.backdrop.active {
+/* .backdrop.active {
     display: block;
-}
+} */
 
 
 /* ----------- cabin + location - slideshow ---------  */
