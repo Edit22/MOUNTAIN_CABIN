@@ -17,12 +17,57 @@
 
 // });
 
+// -------------------------------
 
-const menuOpen = document.querySelector('.menuBtn');
 
-const menuClose = document.querySelector('.close__btn');
-const menuAside = document.querySelector('.menu__aside');
 
-menuOpen.addEventListener('click', function() {
-     menuAside.style.right = '310px';
-});
+
+// const menuOpen = document.querySelector('.menuBtn');
+
+// const menuClose = document.querySelector('.close__btn');
+// const menuAside = document.querySelector('.menu__aside');
+
+// menuOpen.addEventListener('click', function() {
+//      menuAside.style.right = '310px';
+// });
+
+// ----------------------------------
+
+
+
+// const cabinButton = document.querySelector('.cabinNextBtn');
+
+// function isMobileScreen() {
+//     return window.matchMedia('(max-width: 912px)').matches;
+//   }
+
+//   function updateButtonText() {
+//     if (isMobileScreen()) {
+//         cabinButton.textContent = 'Click to See Photos';
+//     } else {
+//       cabinButton.textContent = 'Next Photo';
+//     }
+//   }
+
+//   updateButtonText();
+
+//   window.addEventListener('resize', updateButtonText);
+
+// -----------------------------
+
+
+const cabinButton = document.querySelector('.cabinNextBtn');
+
+const additionalPhotosContainer = document.querySelector('.additionalPhotos-container');
+
+function isMobileScreen() {
+    return window.matchMedia('(max-width: 912px)').matches;
+  }
+
+  function toggleAdditionalPhotos() {
+    if (isMobileScreen()) {
+        additionalPhotosContainer.style.display = additionalPhotosContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  }
+
+  cabinButton.addEventListener('click', toggleAdditionalPhotos);

@@ -76,9 +76,19 @@
             <br>
             <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deserunt dicta ipsum quae. Facilis, exercitationem harum consequatur velit aperiam id, at voluptas voluptate illum alias sapiente! Necessitatibus cupiditate quo itaque.
             </p>
+            <div class="additionalPhotos-container">
+                <img src="location_cabin/cabin_1.png" alt="
+                Pyrenees">
+                <img src="location_cabin/cabin_2.png" alt="">
+                <img src="location_cabin/cabin_3.png" alt="">
+                <img src="location_cabin/cabin_4.png" alt="">
+                <img src="location_cabin/cabin_6.png" alt="">
+            </div>
             <button class="cabinNextBtn">Next Photo</button>
+
         </div>
     </section>
+   
 </div>
 
 <!-- ----------------- location ------------------ -->
@@ -90,7 +100,7 @@
         <p>Rates starting at $549/mo</p>
         <div class="buttons">
             <a href="#custom">Custom Orders</a>
-            <button class="location__nextBtn">Contact</button>
+            <a href="#contact">Contact</a>
         </div>
     </div>
 </section>
@@ -321,6 +331,56 @@ menuClose.addEventListener('click', function() {
   }
 });
 
+
+</script>
+
+
+<script>
+
+const cabinButton = document.querySelector('.cabinNextBtn');
+
+function isMobileScreen() {
+    return window.matchMedia('(max-width: 912px)').matches;
+  }
+
+  function updateButtonText() {
+    if (isMobileScreen()) {
+        cabinButton.textContent = 'Click to See Photos ';
+    } else {
+      cabinButton.textContent = 'Next Photo';
+    }
+  }
+
+  updateButtonText();
+
+  window.addEventListener('resize', updateButtonText);
+
+</script>
+
+<script>
+
+
+const showMoreButton = document.querySelector('.cabinNextBtn');
+
+const additionalPhotosContainer = document.querySelector('.additionalPhotos-container');
+
+function isMobileScreen() {
+    return window.matchMedia('(max-width: 912px)').matches;
+  }
+
+  function toggleAdditionalPhotos() {
+    if (isMobileScreen()) {
+        if (additionalPhotosContainer.style.display === 'none') {
+            additionalPhotosContainer.style.display = 'grid';
+            showMoreButton.textContent = 'Close';
+        } else {
+        additionalPhotosContainer.style.display = 'none';
+        showMoreButton.textContent = 'Click to See Photos';
+        }
+    }
+  }
+
+  showMoreButton.addEventListener('click', toggleAdditionalPhotos);
 
 </script>
 </body>
