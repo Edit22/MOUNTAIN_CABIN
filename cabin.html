@@ -79,12 +79,13 @@
             <div class="additionalPhotos-container">
                 <img src="location_cabin/cabin_1.png" alt="
                 Pyrenees">
+                <p>hjgucjycjgc</p>
                 <img src="location_cabin/cabin_2.png" alt="">
-                <img src="location_cabin/cabin_3.png" alt="">
                 <img src="location_cabin/cabin_4.png" alt="">
                 <img src="location_cabin/cabin_6.png" alt="">
             </div>
-            <button class="cabinNextBtn">Next Photo</button>
+            <button class="cabinNextBtn">Next Photo
+            </button>
 
         </div>
     </section>
@@ -116,9 +117,27 @@
         <div class="location-button">
             <h2>Spanish Pyrenees</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
+            <a href="#">Discover Localization: Click here for more information.</a>
             <div class="locationBtn">
                 <button class="locationNextBtn">Next Location</button>
               </div>
+        </div>
+        <div class="additionalLocalization-container">
+            <div class="location-button-1">
+                <h2>Tatra Mountains</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
+                <a href="#">Discover Localization: Click here for more information.</a>
+            </div>
+            <div class="location-button-2">
+                <h2>Alp Mountains</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
+                <a href="#">Discover Localization: Click here for more information.</a>
+            </div>
+            <div class="location-button-3">
+                <h2>Dolomite Mountains</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
+                <a href="#">Discover Localization: Click here for more information.</a>
+            </div>
         </div>
     </section>
 </div>
@@ -280,13 +299,15 @@
  </footer>
 
 
+ <!-- ------------- cabin photos slideshow ------------  -->
+
 <script>
 
 const cabinImg = document.querySelector('.cabinSlideImg');
 const cabinBtn = document.querySelector('.cabinNextBtn');
 
 
-const cabinSlideshow = ['location_cabin/cabin_4.png', 'location_cabin/cabin_2.png', 'location_cabin/cabin_3.png', 'location_cabin/cabin_1.png', 'location_cabin/cabin_6.png'];
+const cabinSlideshow = ['location_cabin/cabin_4.png', 'location_cabin/cabin_2.png', 'location_cabin/cabin_1.png', 'location_cabin/cabin_6.png'];
 
 let currentCabinSlideshowIndex = 0;
 
@@ -302,6 +323,8 @@ cabinImg.src = cabinSlideshow[currentCabinSlideshowIndex];
 });
 
 </script>
+
+<!-- --------  menu aside + backdrop ----------  -->
 
 <script>
 
@@ -335,6 +358,8 @@ menuClose.addEventListener('click', function() {
 </script>
 
 
+<!-- --------- change button name max-width:912px ----  -->
+
 <script>
 
 const cabinButton = document.querySelector('.cabinNextBtn');
@@ -357,6 +382,9 @@ function isMobileScreen() {
 
 </script>
 
+
+<!-- --------------- cabin photos - max-width: 912px ------  -->
+
 <script>
 
 
@@ -372,9 +400,13 @@ function isMobileScreen() {
     if (isMobileScreen()) {
         if (additionalPhotosContainer.style.display === 'none') {
             additionalPhotosContainer.style.display = 'grid';
-            showMoreButton.textContent = 'Close';
+            additionalPhotosContainer.style.opacity = '1';
+            showMoreButton.textContent = 'Hide Photos';
         } else {
-        additionalPhotosContainer.style.display = 'none';
+        additionalPhotosContainer.style.opacity = '0';
+        setTimeout(() => {
+            additionalPhotosContainer.style.display = 'none';
+        }, 500);
         showMoreButton.textContent = 'Click to See Photos';
         }
     }
@@ -383,5 +415,31 @@ function isMobileScreen() {
   showMoreButton.addEventListener('click', toggleAdditionalPhotos);
 
 </script>
+
+<!-- ----- location information slider - max-width: 912px -----  -->
+
+<script>
+
+const nextLocationBtn = document.querySelector('.locationNextBtn');
+const locationSlides = document.querySelectorAll('.additionalLocalization-container > div');
+
+
+let currentLocationSlideshowIndex = 0;
+
+const showNextLocationSlide = () => {
+   // Hide the current active slide
+   locationSlides[currentLocationSlideIndex].style.display = 'none';
+
+   // Calculate the index of the next slide
+   currentLocationSlideIndex = (currentLocationSlideIndex + 1) % locationSlides.length;
+
+   // Show the next slide
+   locationSlides[currentLocationSlideIndex].style.display = 'block';
+}; 
+
+nextLocationBtn.addEventListener('click', showNextLocationSlide);
+
+</script>
+
 </body>
 </html>

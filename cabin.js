@@ -56,18 +56,43 @@
 // -----------------------------
 
 
-const cabinButton = document.querySelector('.cabinNextBtn');
+// const cabinButton = document.querySelector('.cabinNextBtn');
 
-const additionalPhotosContainer = document.querySelector('.additionalPhotos-container');
+// const additionalPhotosContainer = document.querySelector('.additionalPhotos-container');
 
-function isMobileScreen() {
-    return window.matchMedia('(max-width: 912px)').matches;
-  }
+// function isMobileScreen() {
+//     return window.matchMedia('(max-width: 912px)').matches;
+//   }
 
-  function toggleAdditionalPhotos() {
-    if (isMobileScreen()) {
-        additionalPhotosContainer.style.display = additionalPhotosContainer.style.display === 'none' ? 'block' : 'none';
-    }
-  }
+//   function toggleAdditionalPhotos() {
+//     if (isMobileScreen()) {
+//         additionalPhotosContainer.style.display = additionalPhotosContainer.style.display === 'none' ? 'block' : 'none';
+//     }
+//   }
 
-  cabinButton.addEventListener('click', toggleAdditionalPhotos);
+//   cabinButton.addEventListener('click', toggleAdditionalPhotos);
+
+
+
+
+// ---------------- location slider max-width: 912px
+
+
+// const nextLocation = document.querySelector('.location-button');
+// const locationBtn = document.querySelector('.locationNextBtn');
+
+
+// const locationSlideshow = ['.location-button', 'location-button-1', 'location-button-2', 'location-button-3'];
+
+// let currentLocationSlideshowIndex = 0;
+
+// locationBtn.addEventListener('click', function(){
+//    if (currentLocationSlideshowIndex >= locationSlideshow.length -1) {
+//     currentLocationSlideshowIndex = 0;
+//    } else {
+//     currentLocationSlideshowIndex++;
+//    }
+
+// nextLocation.src = locationSlideshow[currentLocationSlideshowIndex];
+
+// });
