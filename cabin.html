@@ -420,24 +420,52 @@ function isMobileScreen() {
 
 <script>
 
-const nextLocationBtn = document.querySelector('.locationNextBtn');
-const locationSlides = document.querySelectorAll('.additionalLocalization-container > div');
+const maxScreenWidth = 912;
+        const nextLocationBtn = document.querySelector('.locationNextBtn');
+        const locationBtn = document.querySelector('.location-button');
+        const locationSlides = document.querySelectorAll('.additionalLocalization-container > div');
 
+        let currentLocationSlideIndex = 0;
+        let isAdditionalContainerVisible = false;
 
-let currentLocationSlideshowIndex = 0;
+        const toggleAdditionalContainer = () => {
+            isAdditionalContainerVisible = !isAdditionalContainerVisible;
+            const displayValue = isAdditionalContainerVisible ? 'block' : 'none';
+            document.querySelector('.additionalLocalization-container').style.display = displayValue;
+            locationBtn.style.display = isAdditionalContainerVisible ? 'none' : 'block';
+            if (isAdditionalContainerVisible) {
+                // Show the first location description
+                locationSlides[currentLocationSlideIndex].style.display = 'block';
+            }
+        };
 
-const showNextLocationSlide = () => {
-   // Hide the current active slide
-   locationSlides[currentLocationSlideIndex].style.display = 'none';
+        const showNextLocationSlide = () => {
+            // Hide the current active slide
+            locationSlides[currentLocationSlideIndex].style.display = 'none';
 
-   // Calculate the index of the next slide
-   currentLocationSlideIndex = (currentLocationSlideIndex + 1) % locationSlides.length;
+            // Calculate the index of the next slide
+            currentLocationSlideIndex = (currentLocationSlideIndex + 1) % locationSlides.length;
 
-   // Show the next slide
-   locationSlides[currentLocationSlideIndex].style.display = 'block';
-}; 
+            // Show the next slide
+            locationSlides[currentLocationSlideIndex].style.display = 'block';
+        };
 
-nextLocationBtn.addEventListener('click', showNextLocationSlide);
+        nextLocationBtn.addEventListener('click', () => {
+            if (window.innerWidth <= maxScreenWidth) {
+                if (isAdditionalContainerVisible) {
+                    showNextLocationSlide();
+                } else {
+                    toggleAdditionalContainer();
+                }
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > maxScreenWidth && isAdditionalContainerVisible) {
+                // Reset to initial state if screen size exceeds the threshold
+                toggleAdditionalContainer();
+            }
+        });
 
 </script>
 
