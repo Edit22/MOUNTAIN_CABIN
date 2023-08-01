@@ -121,22 +121,32 @@
             <div class="locationBtn">
                 <button class="locationNextBtn">Next Location</button>
               </div>
-        </div>
-        <div class="additionalLocalization-container">
-            <div class="location-button-1">
+       
+            <div class="additionalLocalization-container">
+           
+               <div class="location-button-1">
                 <h2>Tatra Mountains</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
                 <a href="#">Discover Localization: Click here for more information.</a>
-            </div>
-            <div class="location-button-2">
+               </div>
+           
+            
+                <div class="location-button-2">
                 <h2>Alp Mountains</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
                 <a href="#">Discover Localization: Click here for more information.</a>
-            </div>
-            <div class="location-button-3">
+               </div>
+            
+            
+                <div class="location-button-3">
                 <h2>Dolomite Mountains</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero ipsa dolorum eveniet mollitia cumque repellendus, quam nostrum atque ratione iusto tenetur. Fugiat minus inventore, beatae placeat dignissimos quidem sunt</p>
                 <a href="#">Discover Localization: Click here for more information.</a>
+               </div>
+            
+            <div class="locationBtn">
+                <button class="locationCloseBtn">Next Location</button>
+            </div>
             </div>
         </div>
     </section>
@@ -420,52 +430,33 @@ function isMobileScreen() {
 
 <script>
 
-const maxScreenWidth = 912;
-        const nextLocationBtn = document.querySelector('.locationNextBtn');
-        const locationBtn = document.querySelector('.location-button');
-        const locationSlides = document.querySelectorAll('.additionalLocalization-container > div');
+        const locationNextBtn = document.querySelector('.locationNextBtn');
+        const locationCloseBtn = document.querySelector('.locationCloseBtn');
+        const additionalContainer = document.querySelector('.additionalLocalization-container');
+        const locationSlideImg = document.querySelector('.locationSlideImg');
 
-        let currentLocationSlideIndex = 0;
-        let isAdditionalContainerVisible = false;
+        const showAdditionalContainer = () => {
+            additionalContainer.style.display = 'block';
+            locationNextBtn.style.display = 'none';
+            locationSlideImg.src = 'location__images/location_mobileApp.png';
 
-        const toggleAdditionalContainer = () => {
-            isAdditionalContainerVisible = !isAdditionalContainerVisible;
-            const displayValue = isAdditionalContainerVisible ? 'block' : 'none';
-            document.querySelector('.additionalLocalization-container').style.display = displayValue;
-            locationBtn.style.display = isAdditionalContainerVisible ? 'none' : 'block';
-            if (isAdditionalContainerVisible) {
-                // Show the first location description
-                locationSlides[currentLocationSlideIndex].style.display = 'block';
-            }
+            locationSlideImg.style.width = '400px'; 
+            locationSlideImg.style.height = '600px';
+
         };
 
-        const showNextLocationSlide = () => {
-            // Hide the current active slide
-            locationSlides[currentLocationSlideIndex].style.display = 'none';
+        const hideAdditionalContainer = () => {
+            additionalContainer.style.display = 'none';
+            locationNextBtn.style.display = 'block';
+            locationSlideImg.src = 'location_cabin/cabin_1.png';
 
-            // Calculate the index of the next slide
-            currentLocationSlideIndex = (currentLocationSlideIndex + 1) % locationSlides.length;
-
-            // Show the next slide
-            locationSlides[currentLocationSlideIndex].style.display = 'block';
+            locationSlideImg.style.width = ''; 
+            locationSlideImg.style.height = '';
         };
 
-        nextLocationBtn.addEventListener('click', () => {
-            if (window.innerWidth <= maxScreenWidth) {
-                if (isAdditionalContainerVisible) {
-                    showNextLocationSlide();
-                } else {
-                    toggleAdditionalContainer();
-                }
-            }
-        });
+        locationNextBtn.addEventListener('click', showAdditionalContainer);
+        locationCloseBtn.addEventListener('click', hideAdditionalContainer);
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > maxScreenWidth && isAdditionalContainerVisible) {
-                // Reset to initial state if screen size exceeds the threshold
-                toggleAdditionalContainer();
-            }
-        });
 
 </script>
 
